@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.vp-accountant-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+  width: 80%;
+}
+
+.sections-container,
+.committees-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.role-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  position: relative;
+  min-height: 150px;
+  flex: 1 1;
+  width: 80%;
+}
+
+.sub-roles-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  /* margin-top: 20px; */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.director-assistant-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  align-self: flex-end;
+  opacity: 1;
+}
+
+.member-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.member.assistant .member-image {
+  width: 75px;
+  height: 75px;
+}
+
+.member.director .member-image {
+  width: 100px;
+  height: 100px;
+}
+
+.member:hover {
+  transform: scale(1.1);
+}
+
+#year-slider {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.member-initial {
+  transform: scale(0);
+  opacity: 0;
+}
