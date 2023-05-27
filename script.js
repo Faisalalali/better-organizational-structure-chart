@@ -2,23 +2,13 @@ import { getOrganizationDataAsJson } from './data.js';
 
 const chartContainer = document.getElementById('chart-container');
 const yearSlider = document.getElementById('year-slider');
-
-// Get the organization data as JSON
 const organizationDataJson = getOrganizationDataAsJson();
 
 console.log(organizationDataJson);
 
-function createMemberElement(member, isDirector = false, isAssistant = false) {
+function createMemberElement(member, role = 'member') {
   const memberElement = document.createElement('div');
-  memberElement.classList.add('member');
-  if (isDirector) {
-    memberElement.classList.add('director');
-  } else if (isAssistant) {
-    memberElement.classList.add('assistant');
-  } else {
-    memberElement.classList.add('member');
-  }
-
+  memberElement.classList.add('member', role);
   memberElement.setAttribute("data-id", member.id);
 
   const memberImage = document.createElement('img');
@@ -49,17 +39,17 @@ function createRoleSection(name, director, assistantDirectors = [], members = []
   if (director) {
     const directorAssistantRow = document.createElement('div');
     directorAssistantRow.classList.add('director-assistant-row');
-    directorAssistantRow.appendChild(createMemberElement(director, true, false));
+    directorAssistantRow.appendChild(createMemberElement(director, 'director'));
 
     assistantDirectors.forEach(assistantDirector => {
-      directorAssistantRow.appendChild(createMemberElement(assistantDirector, false, true));
+      directorAssistantRow.appendChild(createMemberElement(assistantDirector, 'assistant'));
     });
 
     subRolesContainer.appendChild(directorAssistantRow);
   }
 
   members.forEach(member => {
-    subRolesContainer.appendChild(createMemberElement(member, false, false));
+    subRolesContainer.appendChild(createMemberElement(member));
   });
 
   roleSection.appendChild(subRolesContainer);
@@ -86,18 +76,14 @@ function displayOrganizationStructure(year, shouldAnimate = false) {
     chartContainer.appendChild(presidentSection);
 
     const vicePresidentSection = createRoleSection('Vice President', yearData.vicePresident);
-
     const accountantSection = createRoleSection('Accountant', yearData.accountant);
+    const vpAccountantContainer = createDivWithClass('vp-accountant-container');
 
-    const vpAccountantContainer = document.createElement('div');
-    vpAccountantContainer.classList.add('vp-accountant-container');
     vpAccountantContainer.appendChild(vicePresidentSection);
     vpAccountantContainer.appendChild(accountantSection);
-
     chartContainer.appendChild(vpAccountantContainer);
 
-    const sectionsContainer = document.createElement('div');
-    sectionsContainer.classList.add('sections-container');
+    const sectionsContainer = createDivWithClass('sections-container');
     chartContainer.appendChild(sectionsContainer);
 
     yearData.sections.forEach(section => {
@@ -105,8 +91,7 @@ function displayOrganizationStructure(year, shouldAnimate = false) {
       sectionsContainer.appendChild(sectionSection);
     });
 
-    const committeesContainer = document.createElement('div');
-    committeesContainer.classList.add('committees-container');
+    const committeesContainer = createDivWithClass('committees-container');
     chartContainer.appendChild(committeesContainer);
 
     yearData.committees.forEach(committee => {
@@ -118,6 +103,12 @@ function displayOrganizationStructure(year, shouldAnimate = false) {
   if (shouldAnimate) {
     animateMemberPositions(oldMemberPositions);
   }
+}
+
+function createDivWithClass(className) {
+  const divElement = document.createElement('div');
+  divElement.classList.add(className);
+  return divElement;
 }
 
 function animateMemberPositions(oldMemberPositions) {
