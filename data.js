@@ -32,8 +32,11 @@ const AbdulhadiSidam = new Person(28, 'Abdulhadi Sidam');
 const IbrahimAtiq = new Person(29, 'Ibrahim Atiq');
 const MansourAlsharif = new Person(30, 'Mansour Alsharif');
 const MansourAldosari = new Person(31, 'Mansour Aldosari');
-const AnmarFaisal = new Person(32, 'Anmar Faisal');
+const AnmarAbdulhamid = new Person(32, 'Anmar Faisal');
 const NawafHamdi = new Person (33, 'Nawaf Hamdi');
+const AbdulrahmanAlsuliman = new Person(34, 'Abdulrahman Alsuliman');
+const RawafAlmosa = new Person(35, 'Rawaf Almosa');
+const AliAlnimer = new Person(36, 'Ali Alnimer');
 
 // Create organization for year 2018
 const org2018 = new Organization(2018);
@@ -54,24 +57,27 @@ org2019.addSection(classicGamesSection2019);
 
 // Create section
 const modernGamesSection2019 = new CommitteeOrSection('Modern Games');
-modernGamesSection2019.setDirector(AbdulhadiSidam);
-modernGamesSection2019.addAssistantDirector(AnmarFaisal);
+modernGamesSection2019.setDirector(AnmarAbdulhamid);
+modernGamesSection2019.addAssistantDirector(AbdulhadiSidam);
+modernGamesSection2019.addAssistantDirector(AbdulrahmanAlsuliman);
 org2019.addSection(modernGamesSection2019);
 
 // Create section
 const eGamesSection2019 = new CommitteeOrSection('E-Games');
 eGamesSection2019.setDirector(TarekAljawi);
-eGamesSection2019.addAssistantDirector(AhmadAlqanbar);
+eGamesSection2019.addAssistantDirector(FaresAlnazlawi);
 org2019.addSection(eGamesSection2019);
 
 // Create section
 const eSportSection2019 = new CommitteeOrSection('E-Sport');
-eSportSection2019.setDirector(MansourAldosari);
+eSportSection2019.setDirector(RawafAlmosa);
+eSportSection2019.addAssistantDirector(MansourAldosari);
 org2019.addSection(eSportSection2019);
 
 // Create committee
 const mediaCommittee2019 = new CommitteeOrSection('Media');
-mediaCommittee2019.setDirector(NawafHamdi);
+mediaCommittee2019.setDirector(AliAlnimer);
+mediaCommittee2019.addAssistantDirector(NawafHamdi);
 mediaCommittee2019.addAssistantDirector(DhialddinHamidalddin);
 org2019.addCommittee(mediaCommittee2019);
 
