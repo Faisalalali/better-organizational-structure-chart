@@ -37,10 +37,67 @@ const NawafHamdi = new Person (33, 'Nawaf Hamdi');
 const AbdulrahmanAlsuliman = new Person(34, 'Abdulrahman Alsuliman');
 const RawafAlmosa = new Person(35, 'Rawaf Almosa');
 const AliAlnimer = new Person(36, 'Ali Alnimer');
+const MohammedAlghamdi = new Person(37, 'Mohammed Alghamdi');
+const WaleedAlzahrani = new Person(38, 'Waleed Alzahrani');
+const NizarNoor = new Person(39, 'Nizar Noor');
+const MohammadBamusa = new Person(40, 'Mohammad Bamusa');
+const NawafOthman = new Person(41, 'Nawaf Othman');
+const MazenAlshehri = new Person(42, 'Mazen Alshehri');
+const KhaledAlali = new Person(43, 'Khaled Alali');
+const AbdulazizAlhumaid = new Person(44, 'Abdulaziz Alhumaid');
+const AbdulelahAlem = new Person(45, 'Abdulelah Alem');
+const SaeedAlghamdi = new Person(46, 'Saeed Alghamdi');
+const AbdulazizObayed = new Person(47, 'Abdulaziz Obayed');
+const KhaledMadany = new Person(48, 'Khaled Madany');
+const FaresBanjar = new Person(49, 'Fares Banjar');
 
 // Create organization for year 2018
 const org2018 = new Organization(2018);
 org2018.setPresident(AnasBukhari);
+org2018.setVicePresident(MohammedAlghamdi);
+
+// Create section
+const classicGamesSection2018 = new CommitteeOrSection('Classic Games');
+classicGamesSection2018.setDirector(WaleedAlzahrani);
+classicGamesSection2018.addAssistantDirector(NizarNoor);
+classicGamesSection2018.addAssistantDirector(MohammadBamusa);
+org2018.addSection(classicGamesSection2018);
+
+// Create section
+const modernGamesSection2018 = new CommitteeOrSection('Modern Games');
+modernGamesSection2018.setDirector(MazenAlshehri);
+modernGamesSection2018.addAssistantDirector(NawafOthman);
+modernGamesSection2018.addAssistantDirector(AbdulhadiSidam);
+org2018.addSection(modernGamesSection2018);
+
+// Create section
+const eGamesSection2018 = new CommitteeOrSection('E-Games');
+eGamesSection2018.setDirector(KhaledAlali);
+eGamesSection2018.addAssistantDirector(FaresBanjar);
+org2018.addSection(eGamesSection2018);
+
+// Create section
+const eSportSection2018 = new CommitteeOrSection('E-Sport');
+eSportSection2018.setDirector(MansourAldosari);
+eSportSection2018.addAssistantDirector(AbdulazizAlhumaid);
+org2018.addSection(eSportSection2018);
+
+// Create committee
+const mediaCommittee2018 = new CommitteeOrSection('Media');
+mediaCommittee2018.setDirector(AliAlnimer);
+mediaCommittee2018.addAssistantDirector(AbdulelahAlem);
+org2018.addCommittee(mediaCommittee2018);
+
+// Create committee
+const orgnizationalCommittee2018 = new CommitteeOrSection('Organizational');
+orgnizationalCommittee2018.setDirector(AbdulazizObayed);
+orgnizationalCommittee2018.addAssistantDirector(MohammedAlghamdi);
+orgnizationalCommittee2018.addAssistantDirector(SaeedAlghamdi);
+orgnizationalCommittee2018.addAssistantDirector(TarekAljawi);
+orgnizationalCommittee2018.addAssistantDirector(KhaledMadany);
+org2018.addCommittee(orgnizationalCommittee2018);
+
+
 
 
 // Create organization for year 2019
@@ -70,8 +127,8 @@ org2019.addSection(eGamesSection2019);
 
 // Create section
 const eSportSection2019 = new CommitteeOrSection('E-Sport');
-eSportSection2019.setDirector(RawafAlmosa);
-eSportSection2019.addAssistantDirector(MansourAldosari);
+eSportSection2019.setDirector(MansourAldosari);
+eSportSection2019.addAssistantDirector(RawafAlmosa);
 org2019.addSection(eSportSection2019);
 
 // Create committee
@@ -155,6 +212,8 @@ org2021.addSection(eSportSection2021);
 // Create committee
 const mediaCommittee2021 = new CommitteeOrSection('Media');
 mediaCommittee2021.setDirector(DhialddinHamidalddin);
+mediaCommittee2021.addAssistantDirector(RayyanAlghamdi);
+mediaCommittee2021.addAssistantDirector(NawafHamdi);
 org2021.addCommittee(mediaCommittee2021);
 
 // Create committee
@@ -187,16 +246,17 @@ org2022.addSection(classicGamesSection2022);
 const modernGamesSection2022 = new CommitteeOrSection('Modern Games');
 modernGamesSection2022.setDirector(AbdulhadiZubailah);
 modernGamesSection2022.addAssistantDirector(AbdulmohsenRasheed);
-modernGamesSection2022.addMember(IsmailHawsawi);
+modernGamesSection2022.addAssistantDirector(IsmailHawsawi);
+modernGamesSection2022.addAssistantDirector(YazanFintani);
 org2022.addSection(modernGamesSection2022);
 
 // Create section
 const eGamesSection2022 = new CommitteeOrSection('Video Games');
 eGamesSection2022.setDirector(OmarAlmohammadi);
 eGamesSection2022.addAssistantDirector(MajedAlmadani);
-eGamesSection2022.addMember(OsamaBamardouf);
-eGamesSection2022.addMember(HassanAlobaid);
-eGamesSection2022.addMember(SuhaibHalawani);
+eGamesSection2022.addAssistantDirector(OsamaBamardouf);
+eGamesSection2022.addAssistantDirector(HassanAlobaid);
+eGamesSection2022.addAssistantDirector(SuhaibHalawani);
 org2022.addSection(eGamesSection2022);
 
 // Create committee
