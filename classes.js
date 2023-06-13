@@ -3,7 +3,7 @@ class Person {
   constructor(id, name, image = null) {
     this.id = id;
     this.name = name;
-    this.image = image? `/profile-photos/${image}` : `https://i.pravatar.cc/100?u=${id}`;
+    this.image = image? `./profile-photos/${image}` : `https://i.pravatar.cc/100?u=${id}`;
   }
 }
 
