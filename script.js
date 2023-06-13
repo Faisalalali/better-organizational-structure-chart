@@ -13,7 +13,7 @@ function createMemberElement(member, role = 'member') {
 
   const memberImage = document.createElement('img');
   memberImage.classList.add('member-image');
-  memberImage.src = `https://i.pravatar.cc/100?u=${member.id}`; // Different sizes for director and members
+  memberImage.src = member.image;
   memberImage.alt = member.name;
 
   const memberName = document.createElement('p');

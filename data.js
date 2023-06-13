@@ -1,46 +1,103 @@
 import { Person, Organization, CommitteeOrSection } from './classes.js';
 
 // Create persons
-const FaisalAlali = new Person(1, 'Faisal Alali');
-const FaresAlnazlawi = new Person(2, 'Fares Alnazlawi');
+const FaisalAlali = new Person(1, 'Faisal Alali', 'faisal-alali.jpg');
+const FaresAlnazlawi = new Person(2, 'Fares Alnazlawi', 'fares-alnazlawi.jpg');
 const TarekAljawi = new Person(3, 'Tarek Aljawi');
 const AhmadAlqanbar = new Person(4, 'Ahmad Alqanber');
-const AbdulmuhsinAbabtain = new Person(5, 'Abdulmuhsin Ababtain');
-const MiraanAlkatib = new Person(6, 'Miraan Alkatib');
-const MohammedAlmodhhi = new Person(7, 'Mohammed Almodhhi');
-const AnasBukhari = new Person(8, 'Anas Bukhari');
+const AbdulmuhsinAbabtain = new Person(5, 'Abdulmuhsin Ababtain', 'abdulmuhsin-ababtain.jpg');
+const MiraanAlkatib = new Person(6, 'Miraan Alkatib', 'miraan-alkatib.jpg');
+const MohammedAlmodhhi = new Person(7, 'Mohammed Almodhhi', 'mohammed-almodhhi.jpg');
+const AnasBukhari = new Person(8, 'Anas Bukhari', 'anas-bukhari.jpg');
 const YazanFintani = new Person(9, 'Yazan Fintani');
-const AbdulhadiZubailah = new Person(10, 'Abdulhadi Zubailah');
+const AbdulhadiZubailah = new Person(10, 'Abdulhadi Zubailah', 'abdulhadi-zubailah.jpg');
 const AbdullahAlfaisal = new Person(11, 'Abdullah Alfaisal');
-const AbdulmohsenRasheed = new Person(12, 'Abdulmohsen Rasheed');
+const AbdulmohsenRasheed = new Person(12, 'Abdulmohsen Rasheed', 'abdulmohsen-rasheed.jpg');
 const AhmedAttas = new Person(13, 'Ahmed Attas');
 const DhialddinHamidalddin = new Person(14, 'Dhialddin Hamidalddin');
 const IsmailHawsawi = new Person(15, 'Ismail Hawsawi');
-const MohammedAlmuallimi = new Person(16, 'Mohammed Almuallimi');
-const OsamaBamardouf = new Person(17, 'Osama Bamardouf');
+const MohammedAlmuallimi = new Person(16, 'Mohammed Almuallimi', 'mohammed-almuallimi.jpg');
+const OsamaBamardouf = new Person(17, 'Osama Bamardouf', 'osama-bamardouf.jpg');
 const RayyanAlghamdi = new Person(18, 'Rayyan Alghamdi');
-const RedhaKattoa = new Person(19, 'Redha Kattoa');
-const SalemAlsaqaf = new Person(20, 'Salem Alsaqaf');
+const RedhaKattoa = new Person(19, 'Redha Kattoa', 'redha-kattoa.jpg');
+const SalemAlsaqaf = new Person(20, 'Salem Alsaqaf', 'salem-alsaqaf.png');
 const OmarAlmohammadi = new Person(21, 'Omar Almohammadi');
 const MajedAlmadani = new Person(22, 'Majed Almadani');
 const AbdullahAzhar = new Person(23, 'Abdullah Azhar');
 const SuhaibHalawani = new Person(24, 'Suhaib Halawani');
-const HassanAlobaid = new Person(25, 'Hassan Alobaid');
+const HassanAlobaid = new Person(25, 'Hassan Alobaid', 'hassan-alobaid.jpg');
 const AbdulrahmanAzhar = new Person(26, 'Abdulrahman Azhar');
-const MohammedAhmed = new Person(27, 'Mohammed Ahmed');
+const MohammedAhmed = new Person(27, 'Mohammed Ahmed', 'mohammed-ahmed.jpg');
 const AbdulhadiSidam = new Person(28, 'Abdulhadi Sidam');
 const IbrahimAtiq = new Person(29, 'Ibrahim Atiq');
 const MansourAlsharif = new Person(30, 'Mansour Alsharif');
-const MansourAldosari = new Person(31, 'Mansour Aldosari');
+const MansourAldosari = new Person(31, 'Mansour Aldosari', 'mansour-aldosari.jpg');
 const AnmarAbdulhamid = new Person(32, 'Anmar Faisal');
-const NawafHamdi = new Person (33, 'Nawaf Hamdi');
+const NawafHamdi = new Person (33, 'Nawaf Hamdi', 'nawaf-hamdi.jpg');
 const AbdulrahmanAlsuliman = new Person(34, 'Abdulrahman Alsuliman');
 const RawafAlmosa = new Person(35, 'Rawaf Almosa');
-const AliAlnimer = new Person(36, 'Ali Alnimer');
+const AliAlnimer = new Person(36, 'Ali Alnimer', 'ali-alnimer.jpg');
+const MohammedAlghamdi = new Person(37, 'Mohammed Alghamdi');
+const WaleedAlzahrani = new Person(38, 'Waleed Alzahrani');
+const NizarNoor = new Person(39, 'Nizar Noor', 'nizar-noor.jpg');
+const MohammadBamusa = new Person(40, 'Mohammad Bamusa');
+const NawafOthman = new Person(41, 'Nawaf Othman');
+const MazenAlshehri = new Person(42, 'Mazen Alshehri');
+const KhaledAlali = new Person(43, 'Khaled Alali');
+const AbdulazizAlhumaid = new Person(44, 'Abdulaziz Alhumaid');
+const AbdulelahAlem = new Person(45, 'Abdulelah Alem');
+const SaeedAlghamdi = new Person(46, 'Saeed Alghamdi');
+const AbdulazizObayed = new Person(47, 'Abdulaziz Obayed');
+const KhaledMadany = new Person(48, 'Khaled Madany');
+const FaresBanjar = new Person(49, 'Fares Banjar', 'fares-banjar.jpg');
 
 // Create organization for year 2018
 const org2018 = new Organization(2018);
 org2018.setPresident(AnasBukhari);
+org2018.setVicePresident(MohammedAlghamdi);
+
+// Create section
+const classicGamesSection2018 = new CommitteeOrSection('Classic Games');
+classicGamesSection2018.setDirector(WaleedAlzahrani);
+classicGamesSection2018.addAssistantDirector(NizarNoor);
+classicGamesSection2018.addAssistantDirector(MohammadBamusa);
+org2018.addSection(classicGamesSection2018);
+
+// Create section
+const modernGamesSection2018 = new CommitteeOrSection('Modern Games');
+modernGamesSection2018.setDirector(MazenAlshehri);
+modernGamesSection2018.addAssistantDirector(NawafOthman);
+modernGamesSection2018.addAssistantDirector(AbdulhadiSidam);
+org2018.addSection(modernGamesSection2018);
+
+// Create section
+const eGamesSection2018 = new CommitteeOrSection('E-Games');
+eGamesSection2018.setDirector(KhaledAlali);
+eGamesSection2018.addAssistantDirector(FaresBanjar);
+org2018.addSection(eGamesSection2018);
+
+// Create section
+const eSportSection2018 = new CommitteeOrSection('E-Sport');
+eSportSection2018.setDirector(MansourAldosari);
+eSportSection2018.addAssistantDirector(AbdulazizAlhumaid);
+org2018.addSection(eSportSection2018);
+
+// Create committee
+const mediaCommittee2018 = new CommitteeOrSection('Media');
+mediaCommittee2018.setDirector(AliAlnimer);
+mediaCommittee2018.addAssistantDirector(AbdulelahAlem);
+org2018.addCommittee(mediaCommittee2018);
+
+// Create committee
+const orgnizationalCommittee2018 = new CommitteeOrSection('Organizational');
+orgnizationalCommittee2018.setDirector(AbdulazizObayed);
+orgnizationalCommittee2018.addAssistantDirector(MohammedAlghamdi);
+orgnizationalCommittee2018.addAssistantDirector(SaeedAlghamdi);
+orgnizationalCommittee2018.addAssistantDirector(TarekAljawi);
+orgnizationalCommittee2018.addAssistantDirector(KhaledMadany);
+org2018.addCommittee(orgnizationalCommittee2018);
+
+
 
 
 // Create organization for year 2019
@@ -70,8 +127,8 @@ org2019.addSection(eGamesSection2019);
 
 // Create section
 const eSportSection2019 = new CommitteeOrSection('E-Sport');
-eSportSection2019.setDirector(RawafAlmosa);
-eSportSection2019.addAssistantDirector(MansourAldosari);
+eSportSection2019.setDirector(MansourAldosari);
+eSportSection2019.addAssistantDirector(RawafAlmosa);
 org2019.addSection(eSportSection2019);
 
 // Create committee
@@ -155,6 +212,8 @@ org2021.addSection(eSportSection2021);
 // Create committee
 const mediaCommittee2021 = new CommitteeOrSection('Media');
 mediaCommittee2021.setDirector(DhialddinHamidalddin);
+mediaCommittee2021.addAssistantDirector(RayyanAlghamdi);
+mediaCommittee2021.addAssistantDirector(NawafHamdi);
 org2021.addCommittee(mediaCommittee2021);
 
 // Create committee
@@ -187,16 +246,17 @@ org2022.addSection(classicGamesSection2022);
 const modernGamesSection2022 = new CommitteeOrSection('Modern Games');
 modernGamesSection2022.setDirector(AbdulhadiZubailah);
 modernGamesSection2022.addAssistantDirector(AbdulmohsenRasheed);
-modernGamesSection2022.addMember(IsmailHawsawi);
+modernGamesSection2022.addAssistantDirector(IsmailHawsawi);
+modernGamesSection2022.addAssistantDirector(YazanFintani);
 org2022.addSection(modernGamesSection2022);
 
 // Create section
 const eGamesSection2022 = new CommitteeOrSection('Video Games');
 eGamesSection2022.setDirector(OmarAlmohammadi);
 eGamesSection2022.addAssistantDirector(MajedAlmadani);
-eGamesSection2022.addMember(OsamaBamardouf);
-eGamesSection2022.addMember(HassanAlobaid);
-eGamesSection2022.addMember(SuhaibHalawani);
+eGamesSection2022.addAssistantDirector(OsamaBamardouf);
+eGamesSection2022.addAssistantDirector(HassanAlobaid);
+eGamesSection2022.addAssistantDirector(SuhaibHalawani);
 org2022.addSection(eGamesSection2022);
 
 // Create committee
