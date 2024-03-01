@@ -14,7 +14,7 @@ const AbdulhadiZubailah = new Person(10, 'Abdulhadi Zubailah', 'abdulhadi-zubail
 const AbdullahAlfaisal = new Person(11, 'Abdullah Alfaisal');
 const AbdulmohsenRasheed = new Person(12, 'Abdulmohsen Rasheed', 'abdulmohsen-rasheed.jpg');
 const AhmedAttas = new Person(13, 'Ahmed Attas');
-const DhialddinHamidalddin = new Person(14, 'Dhialddin Hamidalddin');
+const DhiaaddinHamidaddin = new Person(14, 'Dhiaaddin Hamidaddin', 'dhiaaddin-hamidaddin.jpg');
 const IsmailHawsawi = new Person(15, 'Ismail Hawsawi');
 const MohammedAlmuallimi = new Person(16, 'Mohammed Almuallimi', 'mohammed-almuallimi.jpg');
 const OsamaBamardouf = new Person(17, 'Osama Bamardouf', 'osama-bamardouf.jpg');
@@ -50,6 +50,15 @@ const SaeedAlghamdi = new Person(46, 'Saeed Alghamdi');
 const AbdulazizObayed = new Person(47, 'Abdulaziz Obayed');
 const KhaledMadany = new Person(48, 'Khaled Madany');
 const FaresBanjar = new Person(49, 'Fares Banjar', 'fares-banjar.jpg');
+const AhmedAlsayed = new Person(50, 'Ahmed Alsayed');
+const AbdulhadiAljuaidi = new Person(51, 'Abdulhadi Aljuaidi');
+const SaadAlsuhail = new Person(52, 'Saad Alsuhail');
+const AliAljubran = new Person(53, 'Ali Aljubran');
+const OmarAlnajar = new Person(54, 'Omar Alnajar');
+const MohammedTuhami = new Person(55, 'Mohammed Tuhami');
+const AmerDughairy = new Person(56, 'Amer Dughairy');
+const JehadAlharbi = new Person(57, 'Jehad Alharbi');
+
 
 // Create organization for year 2018
 const org2018 = new Organization(2018);
@@ -135,7 +144,7 @@ org2019.addSection(eSportSection2019);
 const mediaCommittee2019 = new CommitteeOrSection('Media');
 mediaCommittee2019.setDirector(AliAlnimer);
 mediaCommittee2019.addAssistantDirector(NawafHamdi);
-mediaCommittee2019.addAssistantDirector(DhialddinHamidalddin);
+mediaCommittee2019.addAssistantDirector(DhiaaddinHamidaddin);
 org2019.addCommittee(mediaCommittee2019);
 
 
@@ -173,7 +182,7 @@ org2020.addSection(eSportSection2020);
 
 // Create committee
 const mediaCommittee2020 = new CommitteeOrSection('Media');
-mediaCommittee2020.setDirector(DhialddinHamidalddin);
+mediaCommittee2020.setDirector(DhiaaddinHamidaddin);
 org2020.addCommittee(mediaCommittee2020);
 
 
@@ -211,7 +220,7 @@ org2021.addSection(eSportSection2021);
 
 // Create committee
 const mediaCommittee2021 = new CommitteeOrSection('Media');
-mediaCommittee2021.setDirector(DhialddinHamidalddin);
+mediaCommittee2021.setDirector(DhiaaddinHamidaddin);
 mediaCommittee2021.addAssistantDirector(RayyanAlghamdi);
 mediaCommittee2021.addAssistantDirector(NawafHamdi);
 org2021.addCommittee(mediaCommittee2021);
@@ -261,7 +270,7 @@ org2022.addSection(eGamesSection2022);
 
 // Create committee
 const mediaCommittee2022 = new CommitteeOrSection('Media');
-mediaCommittee2022.setDirector(DhialddinHamidalddin);
+mediaCommittee2022.setDirector(DhiaaddinHamidaddin);
 org2022.addCommittee(mediaCommittee2022);
 
 // Create committee
@@ -278,8 +287,62 @@ developmentCommittee2022.addAssistantDirector(TarekAljawi);
 org2022.addCommittee(developmentCommittee2022);
 
 
+// Create organization for year 2022
+const org2023 = new Organization(2023);
+org2023.setPresident(DhiaaddinHamidaddin);
+org2023.setVicePresident(MajedAlmadani);
+org2023.setAccountant(AhmedAttas);
+
+// Create section
+const classicGamesSection2023 = new CommitteeOrSection('Classic Games');
+classicGamesSection2023.setDirector(AhmedAlsayed);
+classicGamesSection2023.addAssistantDirector(AbdullahAlfaisal);
+org2023.addSection(classicGamesSection2023);
+
+// Create section
+const modernGamesSection2023 = new CommitteeOrSection('Modern Games');
+modernGamesSection2023.setDirector(IsmailHawsawi);
+modernGamesSection2023.addAssistantDirector(AbdulhadiAljuaidi);
+org2023.addSection(modernGamesSection2023);
+
+// Create section
+const eGamesSection2023 = new CommitteeOrSection('Video Games');
+eGamesSection2023.setDirector(HassanAlobaid);
+eGamesSection2023.addAssistantDirector(SuhaibHalawani);
+org2023.addSection(eGamesSection2023);
+
+// Create committee
+const mediaCommittee2023 = new CommitteeOrSection('Media');
+mediaCommittee2023.setDirector(SaadAlsuhail);
+org2023.addCommittee(mediaCommittee2023);
+
+// Create committee
+const designCommittee2023 = new CommitteeOrSection('Design');
+designCommittee2023.setDirector(AliAljubran);
+org2023.addCommittee(designCommittee2023);
+
+// Create committee
+const developmentCommittee2023 = new CommitteeOrSection('Development');
+developmentCommittee2023.setDirector(OmarAlnajar);
+org2023.addCommittee(developmentCommittee2023);
+
+// Create committee
+const orgnizationalCommittee2023 = new CommitteeOrSection('Organizational');
+orgnizationalCommittee2023.setDirector(MohammedTuhami);
+org2023.addCommittee(orgnizationalCommittee2023);
+
+// Create committee
+const innerEventsCommittee2023 = new CommitteeOrSection('Inner Events');
+innerEventsCommittee2023.setDirector(AmerDughairy);
+org2023.addCommittee(innerEventsCommittee2023);
+
+const keeperCommittee2023 = new CommitteeOrSection('Keeper');
+keeperCommittee2023.setDirector(JehadAlharbi);
+org2023.addCommittee(keeperCommittee2023);
+
+
 // Store the organizations in an array
-const organizations = [org2018, org2019, org2020, org2021, org2022];
+const organizations = [org2018, org2019, org2020, org2021, org2022, org2023];
 
 // Function to get the data as JSON
 export function getOrganizationDataAsJson() {
